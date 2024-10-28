@@ -5,6 +5,7 @@ class BankAccount: #This function defines bank account and gives it 3 attributes
         self.full_name = full_name
         self.account_number = account_number if account_number else self.generate_account_number()
         self.balance = 0.0
+        self.routing_number = "186039374" 
 
     def generate_account_number(self): #This is used to generate a random account number by importanting from random.
         return (strrandom.randint(10000000, 99999999))
@@ -34,6 +35,14 @@ class BankAccount: #This function defines bank account and gives it 3 attributes
     def print_statement(self): #This prints the account number and make sure only the last 4 numbers can be seen
         print(f"{self.full_name}\nAccount No.: ****{self.account_number[-4:]}\nBalance: ${self.balance:.2f}")
 
+    def print_receipt(self):
+        print("---- Receipt ----")
+        print(f"Name: {self.full_name}")
+        print(f"Account No.: ****{self.account_number[-4:]}")
+        print(f"Routing No.: {self.routing_number}")
+        print(f"Balance: ${self.balance:.2f}")
+        print("-----------------")
+
 
 if __name__ == "__main__":
     mitchell_account = BankAccount("Mitchell", account_number="03141592")
@@ -49,6 +58,8 @@ if __name__ == "__main__":
     mitchell_account.withdraw(150)
 
     mitchell_account.print_statement()
+
+    mitchell_account.print_receipt()
 
 
     
