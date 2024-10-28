@@ -1,3 +1,3 @@
 ## Bank Account Project
 
-We used a BankAccount class to simulates a bank account. We made it so that you can create a account, deposit and withdraw money, look at the account balance, and add interest. 
+The goal of this project was to simulate a working bank account. We used the class "BankAccount" to make it work and assigned it multiple functions to allow the program to generate an account number, make a deposit, withdraw money, get your balance, add interest and had a print statement to give you feedback based on requests and inputs.
