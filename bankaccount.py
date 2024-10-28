@@ -21,3 +21,12 @@ class BankAccount: #This function defines bank account and gives it 3 attributes
         else
             self.balance -= amount
             print(f"Amount withdrawn: ${amount:2f} New balance: ${self.balance.2f}") # If the amount you want to withdraw is less than or equal to your balance it lets you withdrawn and prints out a message.  
+
+    def get_balance(self): #This function retrieves your current calance and prints it out.
+        print(f"Your balance is: ${self.balance:.2f}")
+        return self.balance
+    
+    def add_interest(self): #Function to add interest, given is 0.083% a month so we multiple balance by 0.00083.
+        interest = self.balance * 0.00083
+        self.balance += interest
+        print(f"Interest: ${interest.2f} Balance: ${self.balance.2f}")
