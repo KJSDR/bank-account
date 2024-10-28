@@ -18,3 +18,6 @@ class BankAccount: #This function defines bank account and gives it 3 attributes
             print("Insufficient funds.")
             self.balance -= 10
             print(f"Overdraft fee is charged. Your new balance is: ${self.balance:.2f}")
+        else
+            self.balance -= amount
+            print(f"Amount withdrawn: ${amount:2f} New balance: ${self.balance.2f}") # If the amount you want to withdraw is less than or equal to your balance it lets you withdrawn and prints out a message.  
