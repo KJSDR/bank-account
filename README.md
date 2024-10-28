@@ -4,6 +4,7 @@ The goal of this project was to simulate a working bank account. We used the cla
 
 # Pseudo Code
 
+***
 -Class BankAccount
 -- Make the account attributes
   -Set full_name
@@ -55,5 +56,6 @@ The goal of this project was to simulate a working bank account. We used the cla
       -Print "Account Holder: full_name
       -Print "Account number: **** and last 4 numbers of account_number
       -Print "Balance: $X"
+***
 
   
