@@ -8,7 +8,8 @@ class BankAccount: #This function defines bank account and gives it 3 attributes
         self.routing_number = "186039374" 
 
     def generate_account_number(self): #This is used to generate a random account number by importanting from random.
-        return (strrandom.randint(10000000, 99999999))
+        return str(random.randint(10000000, 99999999))
+
 
     def deposit(self, amount): #Here we define the deposite function and how it is updated
         self.balance += amount
@@ -21,7 +22,7 @@ class BankAccount: #This function defines bank account and gives it 3 attributes
             print(f"Overdraft fee is charged. Your new balance is: ${self.balance:.2f}")
         else:
             self.balance -= amount
-            print(f"Amount withdrawn: ${amount:2f} New balance: ${self.balance:.2f}") # If the amount you want to withdraw is less than or equal to your balance it lets you withdrawn and prints out a message.  
+            print(f"Amount withdrawn: ${amount:.2f} New balance: ${self.balance:.2f}") # If the amount you want to withdraw is less than or equal to your balance it lets you withdrawn and prints out a message.  
 
     def get_balance(self): #This function retrieves your current calance and prints it out.
         print(f"Your balance is: ${self.balance:.2f}")
@@ -46,20 +47,31 @@ class BankAccount: #This function defines bank account and gives it 3 attributes
 
 if __name__ == "__main__":
     mitchell_account = BankAccount("Mitchell", account_number="03141592")
-
     mitchell_account.deposit(400000)
-
     mitchell_account.print_statement()
-
     mitchell_account.add_interest()
-
     mitchell_account.print_statement()
-
     mitchell_account.withdraw(150)
-
     mitchell_account.print_statement()
-
     mitchell_account.print_receipt()
+
+    killian_account = BankAccount("Killian")
+    killian_account.deposit(1000000)
+    killian_account.print_statement()
+    killian_account.add_interest()
+    killian_account.print_statement()
+    killian_account.withdraw(5000000)
+    killian_account.print_statement()
+    killian_account.print_receipt()
+
+    Estelle_account = BankAccount("Estelle")
+    Estelle_account.deposit(100000)
+    Estelle_account.print_statement()
+    Estelle_account.add_interest()
+    Estelle_account.print_statement()
+    Estelle_account.withdraw(30000)
+    Estelle_account.print_statement()
+    Estelle_account.print_receipt()
 
 
     
