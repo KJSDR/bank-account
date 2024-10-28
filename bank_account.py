@@ -1,13 +1,13 @@
 import random
 
 class BankAccount: #This function defines bank account and gives it 3 attributes, fullname, account number and balance.
-    def __init__(self, full_name):
+    def __init__(self, full_name, account_number=None):
         self.full_name = full_name
-        self.account_number = self.generate_account_number()
+        self.account_number = account_number if account_number else self.generate_account_number()
         self.balance = 0.0
 
     def generate_account_number(self): #This is used to generate a random account number by importanting from random.
-        return random.randint(10000000, 99999999)
+        return (strrandom.randint(10000000, 99999999))
 
     def deposit(self, amount): #Here we define the deposite function and how it is updated
         self.balance += amount
@@ -31,8 +31,9 @@ class BankAccount: #This function defines bank account and gives it 3 attributes
         self.balance += interest
         print(f"Interest: ${interest:.2f} Balance: ${self.balance:.2f}")
     
-    def print_statement(self): #This prints the accounts name and hidden version of the account number that only shows the last four numbers.
-        print(f"{self.full_name}\nAccount No.: ****{self.account_number % 10000:04d}\nBalance: ${self.balance:.2f}")
+    def print_statement(self): #This prints the account number and make sure only the last 4 numbers can be seen
+        print(f"{self.full_name}\nAccount No.: ****{self.account_number[-4:]}\nBalance: ${self.balance:.2f}")
+
 
 if __name__ == "__main__":
     mitchell_account = BankAccount("Mitchell", account_number="03141592")
