@@ -64,14 +64,14 @@ if __name__ == "__main__":
     killian_account.print_statement()
     killian_account.print_receipt()
 
-    Estelle_account = BankAccount("Estelle")
-    Estelle_account.deposit(100000)
-    Estelle_account.print_statement()
-    Estelle_account.add_interest()
-    Estelle_account.print_statement()
-    Estelle_account.withdraw(30000)
-    Estelle_account.print_statement()
-    Estelle_account.print_receipt()
+    estelle_account = BankAccount("Estelle")
+    estelle_account.deposit(100000)
+    estelle_account.print_statement()
+    estelle_account.add_interest()
+    estelle_account.print_statement()
+    estelle_account.withdraw(30000)
+    estelle_account.print_statement()
+    estelle_account.print_receipt()
 
 
     
