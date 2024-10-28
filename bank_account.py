@@ -31,12 +31,12 @@ class BankAccount: #This function defines bank account and gives it 3 attributes
     def add_interest(self): #Function to add interest, given is 0.083% a month so we multiple balance by 0.00083.
         interest = self.balance * 0.00083
         self.balance += interest
-        print(f"Interest: ${interest:.2f} Balance: ${self.balance:.2f}")
+        print(f"Interest: ${interest:.2f} Balance: ${self.balance:.2f}") #The .2f portion ensures that numbers are shortened and rounded up to the nearest 2 numbers.
     
     def print_statement(self): #This prints the account number and make sure only the last 4 numbers can be seen
         print(f"{self.full_name}\nAccount No.: ****{self.account_number[-4:]}\nBalance: ${self.balance:.2f}")
 
-    def print_receipt(self):
+    def print_receipt(self): #This function is made to give a receipt at the end listing out the name, last 4 of account number, routing numbers and balance of account.
         print("---- Receipt ----")
         print(f"Name: {self.full_name}")
         print(f"Account No.: ****{self.account_number[-4:]}")
@@ -60,7 +60,7 @@ if __name__ == "__main__":
     killian_account.print_statement()
     killian_account.add_interest()
     killian_account.print_statement()
-    killian_account.withdraw(5000000)
+    killian_account.withdraw(5000000) #Since I made the withdraw amount more than the balance, this will print out our insufficent funds/over draft fee message.
     killian_account.print_statement()
     killian_account.print_receipt()
 
