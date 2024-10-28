@@ -35,7 +35,7 @@ class BankAccount: #This function defines bank account and gives it 3 attributes
         print(f"{self.full_name}\nAccount No.: ****{self.account_number % 10000:04d}\nBalance: ${self.balance:.2f}")
 
 if __name__ == "__main__":
-    mitchell_account = BankAccount("Mitchell", account_number=03141592)
+    mitchell_account = BankAccount("Mitchell", account_number="03141592")
 
     mitchell_account.deposit(400000)
 
