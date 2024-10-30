@@ -7,7 +7,7 @@ class BankAccount: #This function defines bank account and gives it 3 attributes
         self.balance = 0.0
         self.routing_number = "186039374" 
 
-    def generate_account_number(self): #This is used to generate a random account number by importanting from random.
+    def generate_account_number(self): #This is used to generate a random account number by importing from random.
         return str(random.randint(10000000, 99999999))
 
 
@@ -24,7 +24,7 @@ class BankAccount: #This function defines bank account and gives it 3 attributes
             self.balance -= amount
             print(f"Amount withdrawn: ${amount:.2f} New balance: ${self.balance:.2f}") # If the amount you want to withdraw is less than or equal to your balance it lets you withdrawn and prints out a message.  
 
-    def get_balance(self): #This function retrieves your current calance and prints it out.
+    def get_balance(self): #This function retrieves your current balance and prints it out.
         print(f"Your balance is: ${self.balance:.2f}")
         return self.balance
     
