@@ -6,6 +6,12 @@ The goal of this project was to simulate a working bank account. We used the cla
 
 Python
 
+## How to run the Program
+
+1.Open your terminal
+2.Go to the directory where the file resides
+3.Run the program by entering "python3 bank_account.py"
+
 ## Pseudo Code
 
 ```
