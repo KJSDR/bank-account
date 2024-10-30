@@ -10,7 +10,7 @@ Python
 
 1. Open your terminal
 2. Go to the directory where the file resides
-3. Run the program by entering "python3 bank_account.py"
+3. Run the program by entering "python3 bank_account.py" in your terminal
 
 ## Pseudo Code
 
