@@ -37,7 +37,7 @@ class BankAccount: #This function defines bank account and gives it 3 attributes
         print(f"{self.full_name}\nAccount No.: ****{self.account_number[-4:]}\nBalance: ${self.balance:.2f}")
 
     def print_receipt(self): #This function is made to give a receipt at the end listing out the name, last 4 of account number, routing numbers and balance of account.
-        print("---- Receipt ----")
+        print("---- Receipt ----") #This stylizes it a bit in the terminal to seperate the receipt from the rest of the prints.
         print(f"Name: {self.full_name}")
         print(f"Account No.: ****{self.account_number[-4:]}")
         print(f"Routing No.: {self.routing_number}")
@@ -45,7 +45,7 @@ class BankAccount: #This function defines bank account and gives it 3 attributes
         print("-----------------")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": #This is where we call our funtion to print the following commands.
     mitchell_account = BankAccount("Mitchell", account_number="03141592")
     mitchell_account.deposit(400000)
     mitchell_account.print_statement()
